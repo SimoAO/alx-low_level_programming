@@ -1,27 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - prints the add of the numbers
+ * main - prints natural numbers below 1024 that are
+ * multiplies of 3 or 5
  *
  * Return: always 0.
  */
 
 int main(void)
 {
-	int x;
-	long int n1, n2, mul;
+	int i, j;
 
-	n1 = 1;
-	n2 = 2;
-
-	printf("%ld, %ld", n1, n2);
-	for (x = 0; x < 48; x++)
+	for (i = 1; i < 1024; i++)
 	{
-	mul = n1 + n2;
-	printf(", %ld", mul);
-	n1 = n2;
-	n2 = mul;
+	if ((i % 3) == 0 || (i % 5) == 0)
+	j += i;
 	}
-	printf("\n");
+	printf("%d\n", j);
 	return (0);
 }
