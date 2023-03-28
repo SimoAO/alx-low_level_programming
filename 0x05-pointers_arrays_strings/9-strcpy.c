@@ -7,7 +7,7 @@
  * buffer pointed to by dest.
  * @dest: destination.
  * @src: source.
- * 
+ *
  * Return: the pointer to dest.
  */
 
