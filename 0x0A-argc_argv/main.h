@@ -2,5 +2,6 @@
 #define MAIN_H
 
 int main(int argc, char *argv[]);
+int _isdigit(int c)
 
 #endif
