@@ -1,8 +1,26 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
+
+/**
+ * isinteger - a function that checks if
+ * s is an integer
+ * @s: string input
+ *
+ * Return: 0 if true, 1 if not
+ */
+
+int isinteger(const char *s)
+{
+	int i = 0;
+	while (s[i] != '\0')
+	{
+	if (s[i] < '0' || s[i] > '9')
+	return (1);
+	i++;
+	}
+	return (0);
+}
 
 /**
  * main - a program that adds positive
@@ -15,22 +33,18 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1;
-	int j = 0;
 	int sum = 0;
-
-	for (; i < argc; i++)
+	
+	while (--argc)
 	{
-	for (; argv[i][j] != '\0'; j++)
+	if (isinteger(argv[argc]))
 	{
-	if (!isdigit(argv[i][j]))
-	{
-	printf("error\n");
+	printf("Error\n");
 	return (1);
 	}
-	}
-	sum += atoi(argv[i]);
+	sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
+
 	return (0);
 }
