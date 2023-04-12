@@ -6,6 +6,7 @@
  * dimensional grid previously created by
  * alloc_grid function
  * @grid: multidimensional grid
+ * @height: height input
  *
  * Return: no return
  */
