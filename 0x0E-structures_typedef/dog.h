@@ -2,10 +2,10 @@
 #define DOG_H
 
 /**
- * DOG - typedef for struct dog
+ * dog_t - typedef for struct dog
  */
 
-typedef struct dog DOG;
+typedef struct dog dog_t;
 
 /**
  * struct dog - structure definition of a dog
@@ -23,7 +23,7 @@ struct dog
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-DOG *new_dog(char *name, float age, char *owner);
-void free_dog(DOG *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 
 #endif
