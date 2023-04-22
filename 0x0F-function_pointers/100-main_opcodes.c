@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < nb; i++);
 	{
-	printf("%02x", operation[i] & 0xFF);
+	printf("%02x", array[i] & 0xFF);
 	if (i != nb - 1)
 	printf(" ");
 	}
