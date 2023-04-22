@@ -11,8 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, nb;
-	char *array;
+	int nb, i;
+	char *opc;
 
 	if (argc != 2)
 	{
@@ -25,12 +25,11 @@ int main(int argc, char *argv[])
 	printf("Error\n");
 	exit(2);
 	}
-	array = (char *) main;
-
-	for (i = 0; i < nb; i++);
+	opc = (char *) main;
+	for (i = 0; i < nb; i++)
 	{
-	printf("%02x", array[i] & 0xFF);
-	if (i != nb - 1)
+	printf("%02hhx", opc[i]);
+	if (i < nb - 1)
 	printf(" ");
 	}
 	printf("\n");
