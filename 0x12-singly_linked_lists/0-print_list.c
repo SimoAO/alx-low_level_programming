@@ -4,7 +4,7 @@
  * print_list - a function that prints all
  * the elements of list_t list
  * @h: the linked list
- * 
+ *
  * Return: elements of the list
  */
 
