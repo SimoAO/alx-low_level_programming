@@ -17,10 +17,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht || !key || !*key || !value || !*value)
 	return (0);
 	in = key_index((unsigned char *)key, ht->size);
-	h = ht->array[i];
+	h = ht->array[in];
 	while (h != NULL)
 	{
-	if (strcmp(h->key, key) == NULL)
+	if (strcmp(h->key, key) == 0)
 	{
 	free(h->value);
 	h->value = strdup((char *)value);
@@ -39,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	free(n);
 	return (0);
 	}
-	n->value = stdrup(value);
+	n->value = strdup(value);
 	if (n->value == NULL)
 	{
 	free(n);
