@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 	else
 	printf("'%s': '%s'", loc->key, loc->value);
 	flag = 1;
-	loc = loc ->next;
+	loc = loc->next;
 	}
 	}
 	printf("}\n");
